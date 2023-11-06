@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Product Manager</string>
+    <string name="app_name">IMDMARKET</string>
+    <string name="user">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="userLabel">Usuário:</string>
+    <string name="passwordLabel">Senha:</string>
+    <string name="loginButton">Entrar</string>
+    <string name="successfulLogin">Login bem sucedido</string>
+    <string name="badLogin">Usuário ou senha incorretos</string>
+
 </resources>
