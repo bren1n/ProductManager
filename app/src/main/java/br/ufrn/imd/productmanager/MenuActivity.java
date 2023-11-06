@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     private Login loginFragment;
     @Override
