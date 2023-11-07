@@ -7,30 +7,35 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import br.ufrn.imd.productmanager.R;
 
 public class MenuActivity extends AppCompatActivity {
-    public Boolean loginSession = false;
+    Boolean loginSession;
+    Button buttonCreate, buttonRead, buttonDelete, buttonUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Verifica o status do valor da chave 'loginSession'
-        loginSession = getIntent().getBooleanExtra("loginSession", false);
+        this.loginSession = getIntent().getBooleanExtra("loginSession", false);
 
         if (!loginSession) {
             Intent loginActivityIntent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(loginActivityIntent);
-        } else {
-            Toast.makeText(MenuActivity.this, R.string.successfulLogin, Toast.LENGTH_LONG).show();
+            this.finish();
         }
 
+        buttonCreate = (Button) findViewById(R.id.Menu_buttonCreate);
+        buttonRead = (Button) findViewById(R.id.Menu_buttonRead);
+        buttonDelete = (Button) findViewById(R.id.Menu_buttonDelete);
+        buttonUpdate = (Button) findViewById(R.id.Menu_buttonUpdate);
+
+        //TODO: OnClicks + BD instance (em outra classe)
 
     }
-
 
 }

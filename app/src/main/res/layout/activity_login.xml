@@ -7,13 +7,30 @@
     tools:context=".activities.LoginActivity">
 
     <TextView
+        android:id="@+id/Header_app_name"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="0sp"
+        android:layout_weight="1"
+        android:background="@color/aspargus"
+        android:gravity="center"
+        android:text="@string/Header_app_name"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/usernameLabel2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/userLabel"
+        android:text="@string/Login_userLabel"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -21,12 +38,12 @@
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="172dp"
         android:ems="10"
-        android:hint="@string/user"
+        android:hint="@string/Login_user"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +57,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/passwordLabel"
+        android:text="@string/Login_passwordLabel"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -48,38 +65,40 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="44dp"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="@string/Login_password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!--TODO: Create change password system using @string/Login_changePassword -->
+
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="138dp"
-        android:layout_height="51dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="@string/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/Login_loginButton"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:backgroundTint="@color/sage"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.63" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

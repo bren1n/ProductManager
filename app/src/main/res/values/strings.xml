@@ -1,12 +1,22 @@
 <resources>
-    <string name="app_name">IMDMARKET</string>
-    <string name="user">Usuário</string>
-    <string name="password">Senha</string>
-    <string name="userLabel">Usuário:</string>
-    <string name="passwordLabel">Senha:</string>
-    <string name="loginButton">Entrar</string>
-    <string name="successfulLogin">Login bem sucedido</string>
-    <string name="badLogin">Usuário ou senha incorretos</string>
+    <string name="app_name">IMD Market</string>
+    <string name="Header_app_name">IMDMARKET</string>
+    <string name="Login_user">Usuário</string>
+    <string name="Login_password">Senha</string>
+    <string name="Login_userLabel">Usuário:</string>
+    <string name="Login_passwordLabel">Senha:</string>
+    <string name="Login_loginButton">Entrar</string>
+    <string name="Login_successfulLogin">Login bem sucedido</string>
+    <string name="Login_badLogin">Usuário ou senha incorretos</string>
+    <string name="Login_changePassword">Usuário ou senha incorretos</string>
+
+
+    <string name="Menu_questionTextView">Bem-vindo! O que deseja fazer?</string>
+    <string name="Menu_buttonCreate">Cadastrar produto</string>
+    <string name="Menu_buttonRead">Listar produto</string>
+    <string name="Menu_buttonUpdate">Alterar produto</string>
+    <string name="Menu_buttonDelete">Deletar produto</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

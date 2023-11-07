@@ -51,12 +51,12 @@ public class LoginActivity extends AppCompatActivity {
         String password = data.getString("password", "");
 
         if (user.equals(typedUser) && password.equals(typedPassword)) {
-            Toast.makeText(LoginActivity.this, R.string.successfulLogin, Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this, R.string.Login_successfulLogin, Toast.LENGTH_LONG).show();
             Intent menuActivityIntent = new Intent(getApplicationContext(), MenuActivity.class);
             menuActivityIntent.putExtra("loginSession", true);
             startActivity(menuActivityIntent);
         } else {
-            Toast.makeText(LoginActivity.this, R.string.badLogin, Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this, R.string.Login_badLogin, Toast.LENGTH_LONG).show();
         }
     }
 }

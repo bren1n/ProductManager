@@ -13,6 +13,18 @@
         android:theme="@style/Theme.ProductManager"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DeleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.EdicaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CadastroActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.LoginActivity"
             android:exported="false" />
         <activity
