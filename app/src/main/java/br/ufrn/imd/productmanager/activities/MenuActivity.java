@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -35,6 +36,14 @@ public class MenuActivity extends AppCompatActivity {
         buttonUpdate = (Button) findViewById(R.id.Menu_buttonUpdate);
 
         //TODO: OnClicks + BD instance (em outra classe)
+        Intent cadastroIntent = new Intent(this, CadastroActivity.class);
+
+        buttonCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(cadastroIntent);
+            }
+        });
 
     }
 
