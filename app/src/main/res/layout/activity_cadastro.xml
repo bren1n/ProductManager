@@ -26,17 +26,19 @@
 
     <LinearLayout
         android:id="@+id/CadastroLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/Header_app_name"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <TextView
@@ -45,7 +47,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/Cadastro_codeLabel"
             app:layout_constraintBottom_toTopOf="@+id/code"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +58,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:hint="@string/Cadastro_code"
             android:inputType="number"
@@ -71,7 +73,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/Cadastro_nameLabel"
             app:layout_constraintBottom_toTopOf="@+id/code"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,8 +82,9 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:hint="@string/Cadastro_name"
             android:inputType="text"
@@ -97,7 +99,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/Cadastro_descriptionLabel"
             app:layout_constraintBottom_toTopOf="@+id/code"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +110,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:hint="@string/Cadastro_description"
             android:inputType="text"
@@ -123,7 +125,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/Cadastro_quantityLabel"
             app:layout_constraintBottom_toTopOf="@+id/code"
             app:layout_constraintEnd_toEndOf="parent"
@@ -135,35 +136,27 @@
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:hint="@string/Cadastro_quantity"
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0" />
 
         <Button
             android:id="@+id/createButton"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="8dp"
             android:text="@string/Cadastro_buttonCreate"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:backgroundTint="@color/sage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:backgroundTint="@color/sage" />
 
     </LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="516dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

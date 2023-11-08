@@ -35,8 +35,10 @@ public class MenuActivity extends AppCompatActivity {
         buttonDelete = (Button) findViewById(R.id.Menu_buttonDelete);
         buttonUpdate = (Button) findViewById(R.id.Menu_buttonUpdate);
 
-        //TODO: OnClicks + BD instance (em outra classe)
         Intent cadastroIntent = new Intent(this, CadastroActivity.class);
+        Intent listagemIntent = new Intent(this, ListaActivity.class);
+        Intent edicaoIntent = new Intent(this, EdicaoActivity.class);
+        Intent deleteIntent = new Intent(this, DeleteActivity.class);
 
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,29 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(cadastroIntent);
             }
         });
+
+        buttonRead.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(listagemIntent);
+            }
+        });
+
+        buttonUpdate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(edicaoIntent);
+            }
+        });
+
+        buttonDelete.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(deleteIntent);
+            }
+        });
+
+
 
     }
 
