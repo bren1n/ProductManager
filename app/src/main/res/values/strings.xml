@@ -29,4 +29,15 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="ProductDetail_Name">Nome:</string>
+    <string name="ProductDetail_PageTitle">Detalhes de produto</string>
+    <string name="ProductDetail_Code">Código:</string>
+    <string name="ProductDetail_Desc">Descrição:</string>
+    <string name="ProductDetail_Quantity">Quantidade em estoque:</string>
+    <string name="ProductDetail_NameLoading">Nome carregando...</string>
+    <string name="ProductDetail_CodeLoading">Código carregando...</string>
+    <string name="ProductDetail_DescLoading">Descrição carregando...</string>
+    <string name="ProductDetail_QuantityLoading">Quantidade carregando...</string>
+
+
 </resources>

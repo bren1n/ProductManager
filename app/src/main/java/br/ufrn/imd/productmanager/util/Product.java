@@ -1,6 +1,8 @@
 package br.ufrn.imd.productmanager.util;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
 
     private String codeProduct;
     private String nameProduct;

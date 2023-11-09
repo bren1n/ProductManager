@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProductManager"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DetailProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.DeleteActivity"
             android:exported="false" />
         <activity
