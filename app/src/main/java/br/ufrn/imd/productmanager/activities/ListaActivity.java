@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import br.ufrn.imd.productmanager.R;
+import br.ufrn.imd.productmanager.list.ProductAdapter;
 import br.ufrn.imd.productmanager.util.Product;
 import br.ufrn.imd.productmanager.database.ProductDbHelper;
 import br.ufrn.imd.productmanager.database.ProcuctContract.ProductData;
@@ -26,7 +23,7 @@ import br.ufrn.imd.productmanager.database.ProcuctContract.ProductData;
 
 public class ListaActivity extends AppCompatActivity {
 
-    List<Product> productList;
+    ArrayList<Product> productList;
     ListView productListView;
 
     @Override
@@ -37,15 +34,9 @@ public class ListaActivity extends AppCompatActivity {
         productListView = (ListView) findViewById(R.id.List_ListView);
         productList = new ArrayList<>();
 
-        List<String> nameProductList = new ArrayList<>();
-
         getDatabaseProducts();
 
-        for(Product product:productList) {
-            nameProductList.add(product.getNameProduct());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nameProductList);
+        ProductAdapter adapter = new ProductAdapter(this, R.layout.list_product_item, productList);
         productListView.setAdapter(adapter);
         productListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -76,7 +67,7 @@ public class ListaActivity extends AppCompatActivity {
                 int tempProductQuantity = Integer.parseInt(query.getString(4));
 
                 Product tempProduct = new Product(tempProductCode, tempProductName, tempProductDesc, tempProductQuantity);
-                productList.add(tempProduct);
+                this.productList.add(tempProduct);
 
                 if(!query.moveToNext()){
                     break;

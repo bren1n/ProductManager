@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginVertical="10dp"
-    android:layout_marginHorizontal="10dp"
-    app:cardElevation="8dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ListItem_RelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/ListItem_ProductName"
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Loading..."
+        android:textSize="18sp" />
 
-    />
+    <TextView
+        android:id="@+id/ListItem_ProductCodeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ListItem_ProductName"
+        android:layout_marginTop="0dp"
+        android:text="Prod. Cód.: "
+        android:textColor="@color/light_gray" />
 
-</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/ListItem_ProductCode"
+
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ListItem_ProductName"
+
+        android:layout_toRightOf="@+id/ListItem_ProductCodeTitle"
+        android:text="1234567"
+        android:textColor="@color/light_gray" />
+
+
+</RelativeLayout>
