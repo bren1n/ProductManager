@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".activities.DeleteActivity">
 
+    <TextView
+        android:id="@+id/Header_app_name"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_margin="0sp"
+        android:layout_weight="1"
+        android:background="@color/aspargus"
+        android:gravity="center"
+        android:text="@string/Header_app_name"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Delete_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Delete_CodeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Cadastro_codeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Delete_guideline" />
+
+    <EditText
+        android:id="@+id/Delete_Code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/Cadastro_code"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Delete_CodeLabel" />
+
+
+    <Button
+        android:id="@+id/Delete_DeleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Delete_ButtonDeleteText"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/sage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Delete_Code" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

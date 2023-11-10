@@ -27,6 +27,9 @@
     <string name="Cadastro_quantity">Quantidade</string>
     <string name="Cadastro_buttonCreate">Cadastrar</string>
 
+    <string name="Delete_ButtonDeleteText">Deletar</string>
+    <string name="Delete_CodeLabelText">Código</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="ProductDetail_Name">Nome:</string>
