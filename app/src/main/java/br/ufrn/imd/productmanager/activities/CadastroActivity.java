@@ -35,6 +35,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createProduct();
+                finish();
             }
         });
     }

@@ -3,12 +3,17 @@ package br.ufrn.imd.productmanager.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import br.ufrn.imd.productmanager.R;
@@ -37,13 +42,34 @@ public class EdicaoActivity extends AppCompatActivity {
 
         this.editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { updateProductData(); }
+            public void onClick(View view) {
+                if(updateProductData()) {
+                    finish();
+                }
+            }
         });
+
+        this.codeInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE || event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                    if(searchProductData(false)){
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
     }
 
 
-    private boolean searchProductData(){
-
+    private boolean searchProductData(boolean buttonIsPressed){
+        if (codeInput.getText().toString().isEmpty()) {
+            Toast.makeText(EdicaoActivity.this, "Preencha o campo com o código do produto.", Toast.LENGTH_LONG).show();
+            return false;
+        }
         ProductDbHelper dbHelper = new ProductDbHelper(this);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
@@ -67,15 +93,23 @@ public class EdicaoActivity extends AppCompatActivity {
                 }
             }
         } else {
+            Toast.makeText(this, "Código inválido. Produto não encontrado.", Toast.LENGTH_LONG).show();
             return false;
+        }
+
+        if (!buttonIsPressed) {
+            nameInput.setText(tempProduct.getNameProduct());
+            descriptionInput.setText(tempProduct.getDescProduct());
+            int numericValue = Integer.parseInt(tempProduct.getQuantityString());
+            quantityInput.setText(String.valueOf(numericValue));
         }
 
         return true;
     }
-    private void updateProductData() {
-        if (!searchProductData()) {
-            Toast.makeText(this, "Produto não encontrado", Toast.LENGTH_LONG).show();
-            return;
+    private boolean updateProductData() {
+        if (!searchProductData(true)) {
+            Toast.makeText(this, "Código inválido. Produto não encontrado.", Toast.LENGTH_LONG).show();
+            return false;
         }
 
         String name = nameInput.getText().toString();
@@ -105,8 +139,10 @@ public class EdicaoActivity extends AppCompatActivity {
 
         if (count > 0) {
             Toast.makeText(this, "Produto atualizado com sucesso", Toast.LENGTH_LONG).show();
+            return true;
         } else {
             Toast.makeText(this, "Erro ao atualizar produto", Toast.LENGTH_LONG).show();
+            return false;
         }
     }
 }

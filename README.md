@@ -20,15 +20,15 @@ Feito por:
   - [X]  Todos campos são obrigatórios
   - [X]  Toast caso falte algum campo
   - [X]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
-- [ ]  Tela 4 : Edição
-  - [ ]  Campos: Código, Nome, Descrição, Estoque
-  - [ ]  Apenas código obrigatório
-  - [ ]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
+- [X]  Tela 4 : Edição
+  - [X]  Campos: Código, Nome, Descrição, Estoque
+  - [X]  Apenas código obrigatório
+  - [X]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
 - [ ]  Tela 5 : Listar
   - [X]  ListView com todos produtos
   - [X]  Tela com informações do produto selecionado
   - [ ]  Botão para retornar
-- [ ]  Tela 6 : Deletar
-  - [ ]  Campos : Código
-  - [ ]  Botões para deletar e limpar
-  - [ ]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
+- [X]  Tela 6 : Deletar
+  - [X]  Campos : Código
+  - [X]  Botões para deletar e limpar
+  - [X]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
