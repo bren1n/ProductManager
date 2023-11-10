@@ -39,5 +39,8 @@
     <string name="ProductDetail_DescLoading">Descrição carregando...</string>
     <string name="ProductDetail_QuantityLoading">Quantidade carregando...</string>
 
+    <string name="Edicao_buttonCreate">Atualizar</string>
+
+
 
 </resources>
