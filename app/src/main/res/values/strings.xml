@@ -32,6 +32,8 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="List_ButtonReturn">Voltar</string>
+
     <string name="ProductDetail_Name">Nome:</string>
     <string name="ProductDetail_PageTitle">Detalhes de produto</string>
     <string name="ProductDetail_Code">Código:</string>
@@ -41,6 +43,7 @@
     <string name="ProductDetail_CodeLoading">Código carregando...</string>
     <string name="ProductDetail_DescLoading">Descrição carregando...</string>
     <string name="ProductDetail_QuantityLoading">Quantidade carregando...</string>
+    <string name="ProductDetail_ButtonReturn">Voltar</string>
 
     <string name="Edicao_buttonCreate">Atualizar</string>
 

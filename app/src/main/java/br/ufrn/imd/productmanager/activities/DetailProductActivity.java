@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class DetailProductActivity extends AppCompatActivity {
     TextView code;
     TextView desc;
     TextView quantity;
+    Button buttonReturn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class DetailProductActivity extends AppCompatActivity {
         this.code = (TextView) findViewById(R.id.ProductDetail_Code);
         this.desc = (TextView) findViewById(R.id.ProductDetail_Desc);
         this.quantity = (TextView) findViewById(R.id.ProductDetail_Quantity);
+        this.buttonReturn = (Button) findViewById(R.id.ProdDetail_buttonReturn);
 
         if (intent != null) {
             product = (Product) intent.getSerializableExtra("Product_Entity");
@@ -35,5 +38,12 @@ public class DetailProductActivity extends AppCompatActivity {
             this.desc.setText(product.getDescProduct());
             this.quantity.setText(String.valueOf(product.getQuantity()));
         }
+
+        buttonReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
