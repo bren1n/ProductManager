@@ -67,7 +67,7 @@ public class EdicaoActivity extends AppCompatActivity {
 
     private boolean searchProductData(boolean buttonIsPressed){
         if (codeInput.getText().toString().isEmpty()) {
-            Toast.makeText(EdicaoActivity.this, "Preencha o campo com o código do produto.", Toast.LENGTH_LONG).show();
+            Toast.makeText(EdicaoActivity.this, R.string.Edicao_MissCode, Toast.LENGTH_LONG).show();
             return false;
         }
         ProductDbHelper dbHelper = new ProductDbHelper(this);
@@ -93,7 +93,7 @@ public class EdicaoActivity extends AppCompatActivity {
                 }
             }
         } else {
-            Toast.makeText(this, "Código inválido. Produto não encontrado.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.Edicao_ProductNotFound, Toast.LENGTH_LONG).show();
             return false;
         }
 
@@ -108,7 +108,7 @@ public class EdicaoActivity extends AppCompatActivity {
     }
     private boolean updateProductData() {
         if (!searchProductData(true)) {
-            Toast.makeText(this, "Código inválido. Produto não encontrado.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.Edicao_ProductNotFound, Toast.LENGTH_LONG).show();
             return false;
         }
 
@@ -138,10 +138,10 @@ public class EdicaoActivity extends AppCompatActivity {
         db.close();
 
         if (count > 0) {
-            Toast.makeText(this, "Produto atualizado com sucesso", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.Edicao_UpdateSucess, Toast.LENGTH_LONG).show();
             return true;
         } else {
-            Toast.makeText(this, "Erro ao atualizar produto", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.Edicao_UpdateError, Toast.LENGTH_LONG).show();
             return false;
         }
     }

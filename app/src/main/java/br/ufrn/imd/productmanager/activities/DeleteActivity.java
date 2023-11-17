@@ -27,23 +27,21 @@ public class DeleteActivity extends AppCompatActivity {
         deleteButton = (Button) findViewById(R.id.Delete_DeleteButton);
         productCodeEditText = (EditText) findViewById(R.id.Delete_Code);
 
-
-
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(productCodeEditText.getText().toString().isEmpty()){
-                    Toast.makeText(DeleteActivity.this, "Preencha o campo com o código do produto.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeleteActivity.this, R.string.Delete_MissCode, Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 productCode = productCodeEditText.getText().toString();
 
                 if (deleteProductDatabase(productCode)) {
-                    Toast.makeText(DeleteActivity.this, "Produto deletado com sucesso.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeleteActivity.this, R.string.Delete_DeleteSucess, Toast.LENGTH_LONG).show();
                     finish();
                 } else {
-                    Toast.makeText(DeleteActivity.this, "Produto não encontrado.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeleteActivity.this, R.string.Delete_ProductNotFound, Toast.LENGTH_LONG).show();
                 }
             }
         });

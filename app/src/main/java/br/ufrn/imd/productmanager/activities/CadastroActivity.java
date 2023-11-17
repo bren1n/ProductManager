@@ -34,13 +34,14 @@ public class CadastroActivity extends AppCompatActivity {
         this.createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                createProduct();
-                finish();
+                if(createProduct()){
+                    finish();
+                }
             }
         });
     }
 
-    private void createProduct() {
+    private boolean createProduct() {
         ProductDbHelper dbHelper = new ProductDbHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
@@ -65,8 +66,10 @@ public class CadastroActivity extends AppCompatActivity {
             this.nameInput.setText("");
             this.descriptionInput.setText("");
             this.quantityInput.setText("");
+            return true;
         } else {
             Toast.makeText(this, "Existem campos vazios", Toast.LENGTH_LONG).show();
+            return false;
         }
     }
 }

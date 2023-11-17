@@ -14,13 +14,21 @@ import android.widget.Toast;
 import br.ufrn.imd.productmanager.R;
 
 public class MenuActivity extends AppCompatActivity {
-    Boolean loginSession;
+    Boolean loginSession, passwordDefault;
     Button buttonCreate, buttonRead, buttonDelete, buttonUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        SharedPreferences data = getSharedPreferences("savedData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = data.edit();
+
+        editor.putString("user", "admin");
+        editor.putString("password", "admin");
+
+        editor.commit();
 
         this.loginSession = getIntent().getBooleanExtra("loginSession", false);
 

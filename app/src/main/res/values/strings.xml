@@ -8,7 +8,10 @@
     <string name="Login_loginButton">Entrar</string>
     <string name="Login_successfulLogin">Login bem sucedido</string>
     <string name="Login_badLogin">Usuário ou senha incorretos</string>
-    <string name="Login_changePassword">Usuário ou senha incorretos</string>
+    <string name="Login_missLogin">Campos de senha ou login estão vazios.</string>
+    <string name="Login_changePassword"><u>Esqueci minha senha/login</u></string>
+    <string name="Login_changePasswordSucess">Senha trocada com sucesso. Tente login novamente</string>
+    <string name="Login_changePasswordReset">Login e Senha definidos para o padrão. Tente o login novamente.</string>
 
 
     <string name="Menu_questionTextView">Bem-vindo! O que deseja fazer?</string>
@@ -29,6 +32,9 @@
 
     <string name="Delete_ButtonDeleteText">Deletar</string>
     <string name="Delete_CodeLabelText">Código</string>
+    <string name="Delete_MissCode">Preencha o campo com o código do produto.</string>
+    <string name="Delete_DeleteSucess">Produto deletado com sucesso.</string>
+    <string name="Delete_ProductNotFound">Produto não encontrado.</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -46,6 +52,11 @@
     <string name="ProductDetail_ButtonReturn">Voltar</string>
 
     <string name="Edicao_buttonCreate">Atualizar</string>
+    <string name="Edicao_MissCode">Preencha o campo com o código do produto.</string>
+    <string name="Edicao_ProductNotFound">Produto não encontrado.</string>
+    <string name="Edicao_UpdateSucess">Produto atualizado com sucesso.</string>
+    <string name="Edicao_UpdateError">Erro ao atualizar produto.</string>
+
 
 
 
