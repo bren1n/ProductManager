@@ -6,10 +6,10 @@ Feito por:
 
 ## Requisitos
 
-- [ ]  Tela 1 : Login 
+- [X]  Tela 1 : Login
   - [X]  Usuário inicial
   - [X]  Uso de “SharedPreferences” ou arquivos
-  - [ ]  Alteração de senha
+  - [X]  Alteração de senha
 - [X]  Tela 2 : Menu
   - [X]  Botão para cadastro
   - [X]  Botão para edição
@@ -24,10 +24,10 @@ Feito por:
   - [X]  Campos: Código, Nome, Descrição, Estoque
   - [X]  Apenas código obrigatório
   - [X]  Ao finalizar, um toast de sucesso ou fracasso e voltar para o menu
-- [ ]  Tela 5 : Listar
+- [X]  Tela 5 : Listar
   - [X]  ListView com todos produtos
   - [X]  Tela com informações do produto selecionado
-  - [ ]  Botão para retornar
+  - [X]  Botão para retornar
 - [X]  Tela 6 : Deletar
   - [X]  Campos : Código
   - [X]  Botões para deletar e limpar
